@@ -29,13 +29,22 @@
 <!--<div class="square"></div>-->
 
 <form action="">
-    <label for="currencyInput"></label>
-    <select name="" id="currencyInput">
-        <option value=""></option>
+    <label for="currencyInput">Input Currency</label>
+    <select id="currencyInput">
+        <option value="0">---</option>
         <option value=""></option>
         <option value=""></option>
     </select>
+    <label for="currencyQuantity">Quantity</label>
+    <input type="number" min="0.01" id="currencyQuantity">
+    <label for="currencyOutput">Output Currency</label>
+    <select id="currencyOutput">
+        <option value="0">---</option>
+        <option value=""></option>
+    </select>
 </form>
+
+<div id="result"></div>
 
 
 </body>
