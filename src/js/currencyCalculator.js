@@ -45,7 +45,7 @@ async function calculateCurrencies(){
         if(curInput && curOutput) {
             resultRef.innerText = quantityRef.value * curInput / curOutput;
         } else{
-
+            resultRef.innerText = 'Something is no yes! Try again later.'
         }
     }
 }
