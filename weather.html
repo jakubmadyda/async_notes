@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .wrapper{
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+        }
+
+        .weatherForm {
+            width: 100%;
+            max-width: 500px;
+            margin-inline: auto;
+        }
+
+        .weatherForm:focus {
+            border: 1px solid red;
+        }
+
+        .insideWrapper{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .getButton {
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+            background-color: deepskyblue;
+            display: block;
+            margin-left: auto;
+            margin-right: 0;
+            width: 100%;
+        }
+    </style>
+    <script src="./weather_src/js/weather.js" async defer type="module"></script>
+    <title>Weather</title>
+</head>
+<body>
+
+<div class="wrapper">
+    <form class="weatherForm" id="weatherForm" tabindex="0">
+        <div class="insideWrapper">
+            <label for="city">Enter city</label>
+            <input type="text" id="city">
+            <span>or</span>
+            <button id="getCity" type="button">Get city for my location</button>
+        </div>
+
+        <button type="submit" id="cityButton" class="getButton">Get weather</button>
+    </form>
+
+    <p id="status"></p>
+    <a id="map-link" target="_blank"></a>
+</div>
+</body>
+</html>
